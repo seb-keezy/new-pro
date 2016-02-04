@@ -13,7 +13,7 @@ int goU;
 int goD;
 
 int pageNum;
-int coin1=255;
+int coin1=1;
 int coinCount;
 
 void setup() {
@@ -40,12 +40,13 @@ void draw() {
   
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
-  drawCoin(100-camX, 250-camY,coin1);
   drawBack(200-camX,-10-camY);
-  
+  if(coin1==1){
+    drawCoin(100-camX,250-camY);
+  }
   if(dist(100-camX,250-camY,mukX-camX,mukY-camY)<80){
     coin1=0;
-    coinCount=1;
+    coinCount++;
   }
   
   fill(#ffff00);
