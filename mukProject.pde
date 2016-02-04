@@ -4,8 +4,8 @@ int mukY;
 int camX;
 int camY;
 
-int mapX=800;
-int mapY=800;
+int mapX=1000;
+int mapY=1000;
 
 int goR;
 int goL;
@@ -23,7 +23,7 @@ void setup() {
 }
 
 void draw() {
-  background(#00ff00);
+  background(#FCBC08);
   if (goR==1) {
     mukX+=5;
   }
@@ -36,9 +36,12 @@ void draw() {
   if (goD==1) {
     mukY+=5;
   }
+  
+  
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
   drawCoin(100-camX, 250-camY,coin1);
+  drawBack(200-camX,-10-camY);
   
   if(dist(100-camX,250-camY,mukX-camX,mukY-camY)<80){
     coin1=0;
