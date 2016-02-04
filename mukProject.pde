@@ -45,6 +45,7 @@ void draw() {
   
   if(dist(100-camX,250-camY,mukX-camX,mukY-camY)<80){
     coin1=0;
+    coinCount=1;
   }
   
   fill(#ffff00);
