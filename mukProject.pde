@@ -13,7 +13,8 @@ int goU;
 int goD;
 
 int pageNum;
-int fill=255;
+int coin1=255;
+int coinCount;
 
 void setup() {
   frameRate(30);
@@ -37,11 +38,15 @@ void draw() {
   }
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
-  drawCoin(100-camX, 250-camY,fill);
+  drawCoin(100-camX, 250-camY,coin1);
   
-  if(dist(100-camX,250-camY,mukX+105,mukY-30)<45){
-    fill=0;
+  if(dist(100-camX,250-camY,mukX-camX,mukY-camY)<80){
+    coin1=0;
   }
+  
+  fill(#ffff00);
+  textSize(30);
+  text(coinCount,20,40);
 }
 
 
