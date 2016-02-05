@@ -14,11 +14,11 @@ int goD;
 
 int pageNum;
 int coin1=1;
-int coinCount;
+int coin2=1;
 
 void setup() {
   frameRate(30);
-  size(480, 320);
+  size(800, 800);
   noStroke();
 }
 
@@ -36,22 +36,30 @@ void draw() {
   if (goD==1) {
     mukY+=5;
   }
-  
-  
+
+
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
-  drawBack(200-camX,-10-camY);
-  if(coin1==1){
-    drawCoin(100-camX,250-camY);
+  drawBack(200-camX, -10-camY);
+  if (coin1==1) {
+    drawCoin(100-camX, 250-camY);
   }
-  if(dist(100-camX,250-camY,mukX-camX,mukY-camY)<80){
+  if (dist(100-camX, 250-camY, mukX-camX, mukY-camY)<80) {
     coin1=0;
-    coinCount++;
+  } 
+  if (coin1==0) {
+    drawCoin(20, 20);
   }
-  
-  fill(#ffff00);
-  textSize(30);
-  text(coinCount,20,40);
+
+  if (coin2==1) {
+    drawCoin(600-camX, 50-camY);
+  }
+  if (dist(600-camX, 50-camY, mukX-camX, mukY-camY)<80) {
+    coin2=0;
+  }
+  if (coin2==0) {
+    drawCoin(50, 20);
+  }
 }
 
 
