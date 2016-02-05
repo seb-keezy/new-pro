@@ -4,7 +4,7 @@ int mukY;
 int camX;
 int camY;
 
-int mapX=1000;
+int mapX=1500;
 int mapY=1000;
 
 int goR;
@@ -60,6 +60,10 @@ void draw() {
   if (coin2==0) {
     drawCoin(50, 20);
   }
+  
+  
+  
+  
 }
 
 
