@@ -9,5 +9,6 @@ void drawBack(int x, int y){
   rect(x-210,y+800,300,300);
   //right of main
   rect(x+500,y+200,200,100);
-  
+  //right of bottom corner
+  rect(x+300,y+800,400,100);
 }

@@ -15,6 +15,7 @@ int goD;
 int pageNum;
 int coin1=1;
 int coin2=1;
+int coin3=1;
 
 void setup() {
   frameRate(30);
@@ -61,6 +62,16 @@ void draw() {
     drawCoin(50, 20);
   }
   
+  
+  if (coin3==1) {
+    drawCoin(400-camX, 850-camY);
+  }
+  if (dist(400-camX, 850-camY, mukX-camX, mukY-camY)<80) {
+    coin3=0;
+  }
+  if (coin3==0) {
+    drawCoin(80, 20);
+  }
   
   
   
