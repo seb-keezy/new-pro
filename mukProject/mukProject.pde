@@ -1,5 +1,5 @@
-int mukX;
-int mukY;
+int mukX=50;
+int mukY=50;
 
 int camX;
 int camY;
@@ -16,6 +16,10 @@ int pageNum;
 int coin1=1;
 int coin2=1;
 int coin3=1;
+int coin4=1;
+
+int martX=1300;
+int martY=700;
 
 void setup() {
   frameRate(30);
@@ -42,6 +46,9 @@ void draw() {
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
   drawBack(200-camX, -10-camY);
+  pokemart(martX-camX,martY-camY,2);
+  
+  
   if (coin1==1) {
     drawCoin(100-camX, 250-camY);
   }
@@ -73,7 +80,15 @@ void draw() {
     drawCoin(80, 20);
   }
   
-  
+  if (coin4==1) {
+    drawCoin(1400-camX, 400-camY);
+  }
+  if (dist(1400-camX, 400-camY, mukX-camX, mukY-camY)<80) {
+    coin4=0;
+  }
+  if (coin4==0) {
+    drawCoin(110, 20);
+  }
   
 }
 
