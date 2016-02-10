@@ -18,8 +18,9 @@ int coin2=1;
 int coin3=1;
 int coin4=1;
 
-int martX=1300;
-int martY=700;
+int b1X=300;
+int b1Y=400;
+int b1VX=6;
 
 void setup() {
   frameRate(30);
@@ -29,6 +30,7 @@ void setup() {
 
 void draw() {
   background(#FCBC08);
+  //muk movement
   if (goR==1) {
     mukX+=5;
   }
@@ -41,14 +43,24 @@ void draw() {
   if (goD==1) {
     mukY+=5;
   }
-
-
+  
+  //pokeball movement
+  b1X+=b1VX;
+  if(b1X>1400-camX){
+    b1VX=-b1VX;
+    
+  }
+  if(b1X<300-camX){
+    b1VX=-b1VX;
+  }
+  //call functions
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
   drawBack(200-camX, -10-camY);
-  pokemart(martX-camX,martY-camY,2);
-  
-  
+  pokemart(1300-camX, 700-camY, 2);
+  drawBall(b1X-camX,b1Y-camY,.75);
+
+
   if (coin1==1) {
     drawCoin(100-camX, 250-camY);
   }
@@ -68,8 +80,8 @@ void draw() {
   if (coin2==0) {
     drawCoin(50, 20);
   }
-  
-  
+
+
   if (coin3==1) {
     drawCoin(400-camX, 850-camY);
   }
@@ -79,7 +91,7 @@ void draw() {
   if (coin3==0) {
     drawCoin(80, 20);
   }
-  
+
   if (coin4==1) {
     drawCoin(1400-camX, 400-camY);
   }
@@ -89,7 +101,6 @@ void draw() {
   if (coin4==0) {
     drawCoin(110, 20);
   }
-  
 }
 
 
@@ -173,3 +184,4 @@ void keyReleased() {
     goU=0;
   }
 }
+
