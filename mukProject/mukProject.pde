@@ -69,6 +69,7 @@ void draw() {
     b2Y=100-camY;
   }
   
+
   //call functions
   bordersAndCamera();
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
@@ -201,4 +202,3 @@ void keyReleased() {
     goU=0;
   }
 }
-
