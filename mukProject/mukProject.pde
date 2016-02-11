@@ -48,10 +48,11 @@ void draw() {
   b1X+=b1VX;
   if(b1X>1400-camX){
     b1VX=-b1VX;
-    
+    b1X=1400-camX;
   }
   if(b1X<300-camX){
     b1VX=-b1VX;
+    b1X=300-camX;
   }
   //call functions
   bordersAndCamera();
