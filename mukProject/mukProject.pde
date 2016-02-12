@@ -58,27 +58,37 @@ void draw() {
     b1VX=-b1VX;
     b1X=300-camX;
   }
-  
+
   b2Y+=b2VY;
-  if(b2Y>900-camY){
+  if (b2Y>900-camY) {
     b2VY=-b2VY;
     b2Y=900-camY;
   }
-  if(b2Y<100-camY){
+  if (b2Y<100-camY) {
     b2VY=-b2VY;
     b2Y=100-camY;
   }
-  
 
   //call functions
   bordersAndCamera();
+  //main character
   muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
   drawBack(200-camX, -10-camY);
   pokemart(1300-camX, 700-camY, 2);
+  //enemies
   drawBall(b1X-camX, b1Y-camY, .75);
-  drawBall(b2X-camX,b2Y-camY,.75);
+  drawBall(b2X-camX, b2Y-camY, .75);
 
+  fill(0, 100);
+  rect(mukX-20-camX, mukY-50-camY, 90, 70);
+  
+  if(mukX-20-camX+90>200-camX){
+    mukX=200-70;
+  }
+  
+    
 
+  //drawCoins
   if (coin1==1) {
     drawCoin(100-camX, 250-camY);
   }
