@@ -66,7 +66,22 @@ void mainGame(){
   
   
   //middle main
-  
+  if(mukX-20-camX+90>200-camX && mukX-20-camX+90<220-camX && mukY-50-camY<600-camY
+  && mukY-50-camY+70>500-camY){
+    mukX=130;
+  }
+  if(mukX-20-camX<900-camX && mukX-20-camX>880-camX && mukY-50-camY<600-camY
+  && mukY-50-camY+70>500-camY){
+    mukX=920;
+  }
+  if(mukY-50-camY<600-camY && mukY-50-camY>580-camY && mukX-20-camX<900-camX
+  && mukX-20-camX+90>200-camX){
+    mukY=650;
+  }
+  if(mukY-50-camY+70>500-camY && mukY-50-camY+70<520-camY && mukX-20-camX<900-camX
+  && mukX-20-camX+90>200-camX){
+    mukY=480;
+  }
   //middle right
   if(mukX-20-camX<1300-camX && mukX-20-camX>1280-camX && mukY-50-camY<600-camY
   && mukY-50-camY+70>500-camY){
