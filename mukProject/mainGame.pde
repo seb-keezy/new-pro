@@ -10,15 +10,14 @@ void mainGame(){
   drawBall(b1X-camX, b1Y-camY, .75);
   drawBall(b2X-camX, b2Y-camY, .75);
 
-
-
   //rectangular hit box
   fill(0, 100);
   rect(mukX-20-camX, mukY-50-camY, 90, 70);
   
   
   
-  //collisions
+  //barrier collisions
+  
   //top main
   if(mukX-20-camX+90>200-camX && mukX-20-camX+90<220-camX && mukY-50-camY<300-camY){
     mukX=200-70;
@@ -30,7 +29,6 @@ void mainGame(){
   if(mukX-20-camX<500-camX && mukX-20-camX>480-camX && mukY-50-camY<300-camY){
     mukX=520;
   }
-  
   //top right
   if(mukX-20-camX+90>700-camX && mukX-20-camX+90<720-camX && mukY-50-camY+70>200-camY
   && mukY-50-camY<300-camY){
@@ -64,6 +62,27 @@ void mainGame(){
   if(mukY-50-camY+70<220-camY && mukY-50-camY+70>200-camY && mukX-20-camX+90>1100-camX
   && mukX-20-camX<1300-camX){
     mukY=180;
+  }
+  
+  
+  //middle main
+  
+  //middle right
+  if(mukX-20-camX<1300-camX && mukX-20-camX>1280-camX && mukY-50-camY<600-camY
+  && mukY-50-camY+70>500-camY){
+    mukX=1320;
+  }
+  if(mukX-20-camX+90>1100-camX && mukX-20-camX+90<1120-camX && mukY-50-camY<600-camY
+  && mukY-50-camY+70>500-camY){
+    mukX=1030;
+  }
+  if(mukY-50-camY<600-camY && mukY-50-camY>580-camY && mukX-20-camX<1300-camX
+  && mukX-20-camX+90>1100-camX){
+    mukY=650;
+  }
+  if(mukY-50-camY+70>500-camY && mukY-50-camY+70<520-camY && mukX-20-camX<1300-camX
+  && mukX-20-camX+90>1100-camX){
+    mukY=480;
   }
 
   //drawCoins
