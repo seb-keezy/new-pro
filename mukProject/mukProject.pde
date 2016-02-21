@@ -17,6 +17,7 @@ int coin1=1;
 int coin2=1;
 int coin3=1;
 int coin4=1;
+int allCoin;
 
 int b1X=300;
 int b1Y=400;
@@ -68,66 +69,10 @@ void draw() {
     b2VY=-b2VY;
     b2Y=100-camY;
   }
-
-  //call functions
-  bordersAndCamera();
-  //main character
-  muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
-  drawBack(200-camX, -10-camY);
-  pokemart(1300-camX, 700-camY, 2);
-  //enemies
-  drawBall(b1X-camX, b1Y-camY, .75);
-  drawBall(b2X-camX, b2Y-camY, .75);
-
-  fill(0, 100);
-  rect(mukX-20-camX, mukY-50-camY, 90, 70);
   
-  if(mukX-20-camX+90>200-camX){
-    mukX=200-70;
-  }
-  
-    
-
-  //drawCoins
-  if (coin1==1) {
-    drawCoin(100-camX, 250-camY);
-  }
-  if (dist(100-camX, 250-camY, mukX-camX, mukY-camY)<80) {
-    coin1=0;
-  } 
-  if (coin1==0) {
-    drawCoin(20, 20);
-  }
-
-  if (coin2==1) {
-    drawCoin(600-camX, 50-camY);
-  }
-  if (dist(600-camX, 50-camY, mukX-camX, mukY-camY)<80) {
-    coin2=0;
-  }
-  if (coin2==0) {
-    drawCoin(50, 20);
-  }
-
-
-  if (coin3==1) {
-    drawCoin(400-camX, 850-camY);
-  }
-  if (dist(400-camX, 850-camY, mukX-camX, mukY-camY)<80) {
-    coin3=0;
-  }
-  if (coin3==0) {
-    drawCoin(80, 20);
-  }
-
-  if (coin4==1) {
-    drawCoin(1400-camX, 400-camY);
-  }
-  if (dist(1400-camX, 400-camY, mukX-camX, mukY-camY)<80) {
-    coin4=0;
-  }
-  if (coin4==0) {
-    drawCoin(110, 20);
+  //game modes based on page number
+  if (pageNum==0) {
+    mainGame();
   }
 }
 
