@@ -21,15 +21,19 @@ int allCoin;
 
 int b1X=300;
 int b1Y=400;
-int b1VX=6;
+int b1VX=8;
 
 int b2X=1000;
 int b2Y=100;
-int b2VY=6;
+int b2VY=8;
+
+int b3X=1400;
+int b3Y=700;
+int b3VX=8;
 
 void setup() {
   frameRate(30);
-  size(800, 800);
+  size(800, 600);
   noStroke();
 }
 
@@ -70,6 +74,15 @@ void draw() {
     b2Y=100-camY;
   }
   
+    b3X-=b3VX;
+  if (b3X>1450-camX) {
+    b3VX=-b3VX;
+    b3X=1450-camX;
+  }
+  if (b3X<300-camX) {
+    b3VX=-b1VX;
+    b3X=300-camX;
+  }
   //game modes based on page number
   if (pageNum==0) {
     mainGame();
