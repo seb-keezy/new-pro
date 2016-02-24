@@ -63,6 +63,8 @@ void draw() {
   if (pageNum==2){
     market();
   }
+  
+  
 }
 
 
@@ -130,6 +132,12 @@ void keyPressed() {
     goU=1;
   }
   bordersAndCamera();
+  
+  
+  
+  if (key == '2'){
+    pageNum=2;
+  }
 }
 
 void keyReleased() {
@@ -145,4 +153,7 @@ void keyReleased() {
   if (keyCode==UP) {
     goU=0;
   }
+  
+  
+  
 }
