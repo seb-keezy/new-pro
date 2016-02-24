@@ -53,39 +53,13 @@ void draw() {
     mukY+=5;
   }
 
-  //pokeball movement
-  b1X+=b1VX;
-  if (b1X>1450-camX) {
-    b1VX=-b1VX;
-    b1X=1450-camX;
-  }
-  if (b1X<300-camX) {
-    b1VX=-b1VX;
-    b1X=300-camX;
-  }
-
-  b2Y+=b2VY;
-  if (b2Y>900-camY) {
-    b2VY=-b2VY;
-    b2Y=900-camY;
-  }
-  if (b2Y<100-camY) {
-    b2VY=-b2VY;
-    b2Y=100-camY;
-  }
-  
-    b3X-=b3VX;
-  if (b3X>1450-camX) {
-    b3VX=-b3VX;
-    b3X=1450-camX;
-  }
-  if (b3X<300-camX) {
-    b3VX=-b1VX;
-    b3X=300-camX;
-  }
+ 
   //game modes based on page number
   if (pageNum==0) {
     mainGame();
+  }
+  if (pageNum==2){
+    market();
   }
 }
 
