@@ -31,14 +31,16 @@ int b3X=1400;
 int b3Y=700;
 int b3VX=8;
 
+color backG=(#FCBC08);
+
 void setup() {
   frameRate(30);
-  size(800, 600);
+  size(480, 320);
   noStroke();
 }
 
 void draw() {
-  background(#FCBC08);
+  background(backG);
   //muk movement
   if (goR==1) {
     mukX+=5;

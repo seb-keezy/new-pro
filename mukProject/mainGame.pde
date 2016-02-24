@@ -300,7 +300,7 @@ void mainGame() {
   }
   if(mukY-50-camY<900-camY && mukY-50-camY>880-camY && mukX-20-camX<1500-camX
   && mukX-20-camX+90>1300-camX && allCoin==1){
-    mukY=950=2;
+    mukY=950;
   }
 
   //pokeball movement
