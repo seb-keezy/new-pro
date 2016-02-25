@@ -60,3 +60,33 @@ void drawBall(int x, int y, float s) {
     fill(#dddddd);
     ellipse(x, y, 10*s, 10*s);
 }
+
+
+int gX = 100;
+int gY = 100;
+int hX = 300;
+int hY = 300;
+ 
+void glasses(){
+  fill (#000000);
+  ellipse (gX, gY, 20, 20);
+  ellipse (gX-35, gY, 20,20);
+  fill (#FFFFFF);
+  ellipse (gX, gY, 15, 15);
+  ellipse (gX-35, gY, 15, 15);
+  fill (#000000);
+  rect (gX-25, gY, 17, 1);
+ 
+}
+ 
+void hat(){
+ 
+fill (#FF0000);
+noStroke();
+rect (hX, hY+10, 20, 40);
+rect (hX-10, hY+50, 40, 5);
+fill (#FFFFFF);
+rect (hX, hY+20, 20, 5);
+rect (hX, hY+30, 20, 5);
+rect (hX, hY+40, 20, 5);
+}

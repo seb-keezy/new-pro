@@ -63,7 +63,9 @@ void draw() {
   if (pageNum==2){
     market();
   }
-  
+  if(pageNum==3){
+    miniGame();
+  }
   
 }
 
@@ -153,6 +155,17 @@ void keyReleased() {
   if (keyCode==UP) {
     goU=0;
   }
+  
+}
+
+
+void mousePressed(){
+  if(mouseX>350 && mouseX<420 && mouseY>50 && mouseY<160 && pageNum==2){
+    pageNum=3;
+  }
+  
+  
+  
   
   
   
