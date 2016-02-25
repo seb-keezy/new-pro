@@ -140,6 +140,9 @@ void keyPressed() {
   if (key == '2'){
     pageNum=2;
   }
+  if (key == '3'){
+    pageNum=3;
+  }
 }
 
 void keyReleased() {
