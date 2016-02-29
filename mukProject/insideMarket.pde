@@ -7,6 +7,17 @@ void market(){
   fill(#F0BC6F);
   rect(0,225,250,50);
   
+  //glasses
+  fill (#000000);
+  ellipse (gX, gY, 20, 20);
+  ellipse (gX-35, gY, 20,20);
+  fill (#FFFFFF);
+  ellipse (gX, gY, 15, 15);
+  ellipse (gX-35, gY, 15, 15);
+  fill (#000000);
+  rect (gX-25, gY, 17, 1);
+  
+  
   //arcade
   fill(#00ff00);
   rect(350,50,70,110);
@@ -20,6 +31,13 @@ void market(){
   fill(#ff0000);
   ellipse(401,115,6,6);
   
-  
+  fill (#000000);
+  ellipse (gX, gY, 20, 20);
+  ellipse (gX-35, gY, 20,20);
+  fill (#FFFFFF);
+  ellipse (gX, gY, 15, 15);
+  ellipse (gX-35, gY, 15, 15);
+  fill (#000000);
+  rect (gX-25, gY, 17, 1);
   //pastebin.com/yBckjDSX
 }

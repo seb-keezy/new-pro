@@ -62,8 +62,8 @@ void drawBall(int x, int y, float s) {
 }
 
 
-int gX = 100;
-int gY = 100;
+int gX = 50;
+int gY = 200;
 int hX = 300;
 int hY = 300;
  
