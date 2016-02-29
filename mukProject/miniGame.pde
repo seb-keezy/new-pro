@@ -26,7 +26,7 @@ void miniGame(){
   c2X-=c2VX;
   count++;
   text(count,20,20);
-  text(coinV,20,50);
+  
   if(allCoin2==1){
     drawCoin(coinX,coinY);
   }
@@ -55,10 +55,12 @@ void miniGame(){
   
   if(count>250){
     drawBall(c2X,c2Y,.75);
+    coinV=4;
   }
   
   if(count>500){
     drawBall(c3X,c3Y,.75);
+    coinV=8;
   }
   
   
