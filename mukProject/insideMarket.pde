@@ -7,6 +7,7 @@ void market() {
   rect(0, 125, 250, 100);
   fill(#F0BC6F);
   rect(0, 225, 250, 50);
+  fill(#ffff00);
   text(coinV,20,20);
 
   //glasses

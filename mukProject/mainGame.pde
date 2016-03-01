@@ -3,7 +3,7 @@ void mainGame() {
   //call functions
   bordersAndCamera();
   //main character
-  muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 4);
+  muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, bling);
   drawBack(200-camX, -10-camY);
   pokemart(1300-camX, 700-camY, 2);
   //enemies

@@ -175,13 +175,32 @@ void mousePressed(){
   if(mouseX>0 && mouseX<250 && mouseY>125 && mouseY<275 && pageNum==2){
     pageNum=4;
   }
-  if(mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 && coinV>=4){
+  
+  if(mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 && coinV>=4
+  && bling==1){
     bling=3;
     coinV=coinV-4;
   }
-  if(mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 && coinV>=4){
+  if(mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 
+  && coinV>=4 && bling==2){
+    bling=4;
+    coinV=coinV-4;
+  }
+  
+  if(mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
+  && coinV>=4 && bling==1){
     bling=2;
     coinV=coinV-4;
+  }
+  if(mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
+  && coinV>=4 && bling==3){
+    bling=4;
+    coinV=coinV-4;
+  }
+  
+  
+  if(dist(mouseX,mouseY,400,250)<50 && pageNum==4){
+    pageNum=2;
   }
   
   
