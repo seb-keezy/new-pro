@@ -37,4 +37,28 @@ void muk(int x, int y, color c1, color c2, float s, int q) {
   arc(x+185*s, y-5*s, 60*s, 20*s, 0, PI);
   arc(x+125*s, y-125*s, 170*s, 20*s, 0, PI);
   arc(x+25*s, y-95*s, 65*s, 30*s, 0, PI);
+
+  if (q==2) {
+    stroke(0);
+    strokeWeight(1);
+    fill (#000000);
+    ellipse (x+55, y-40, 20, 20);
+    ellipse (x-35+55, y-40, 20, 20);
+    fill (#FFFFFF);
+    ellipse (x+55, y-40, 15, 15);
+    ellipse (x-35+55, y-40, 15, 15);
+    fill (#000000);
+    rect (x-25+55, y-40, 17, 1);
+  }
+
+  if (q==3) {
+    fill (#FF0000);
+    noStroke();
+    rect (x+20, y+10-100, 20, 40);
+    rect (x-10+20, y+50-100, 40, 5);
+    fill (#FFFFFF);
+    rect (x+20, y+20-100, 20, 5);
+    rect (x+20, y+30-100, 20, 5);
+    rect (x+20, y+40-100, 20, 5);
+  }
 }

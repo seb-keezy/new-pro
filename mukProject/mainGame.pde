@@ -3,7 +3,7 @@ void mainGame() {
   //call functions
   bordersAndCamera();
   //main character
-  muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 1);
+  muk(mukX-camX, mukY-camY, #aa00ee, #8800dd, .3, 4);
   drawBack(200-camX, -10-camY);
   pokemart(1300-camX, 700-camY, 2);
   //enemies
@@ -12,10 +12,10 @@ void mainGame() {
   drawBall(b3X-camX, b3Y-camY, .75);
 
   //rectangular hit box
-  fill(0, 100);
-  rect(mukX-20-camX, mukY-50-camY, 90, 70);
+  //fill(0, 100);
+  //rect(mukX-20-camX, mukY-50-camY, 90, 70);
   //circular hit box
-  ellipse(mukX+25, mukY-20, 80, 80);
+  //ellipse(mukX+25, mukY-20, 80, 80);
 
   //barrier collisions
   //top main

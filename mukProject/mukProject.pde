@@ -66,6 +66,9 @@ void draw() {
   if(pageNum==3){
     miniGame();
   }
+  if(pageNum==4){
+    shop();
+  }
   
 }
 
@@ -143,6 +146,9 @@ void keyPressed() {
   if (key == '3'){
     pageNum=3;
   }
+  if (key == '4'){
+    pageNum=4;
+  }
 }
 
 void keyReleased() {
@@ -166,7 +172,9 @@ void mousePressed(){
   if(mouseX>350 && mouseX<420 && mouseY>50 && mouseY<160 && pageNum==2){
     pageNum=3;
   }
-  
+  if(mouseX>0 && mouseX<250 && mouseY>125 && mouseY<275){
+    pageNum=4;
+  }
   
   
   
