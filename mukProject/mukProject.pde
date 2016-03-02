@@ -198,9 +198,23 @@ void mousePressed(){
     coinV=coinV-4;
   }
   
-  
   if(dist(mouseX,mouseY,400,250)<50 && pageNum==4){
     pageNum=2;
+  }
+  
+  if(mouseX>50 && mouseX<80 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
+    coinV=coinV-4;
+    muk1=(#ffff00);
+    muk2=(#F5D416);
+    
+  }
+  
+  if(mouseX>100 && mouseX<130 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
+    coinV=coinV-4;
+    muk1=(#27F0A4);
+    muk2=(#00ff00);
+    
+    
   }
   
   

@@ -43,45 +43,35 @@ void muk(int x, int y, color c1, color c2, float s, int q) {
     strokeWeight(1);
     fill (#000000);
     ellipse (x+55, y-40, 20, 20);
-    ellipse (x-35+55, y-40, 20, 20);
+    ellipse (x-32+55, y-40, 20, 20);
     fill (#FFFFFF);
     ellipse (x+55, y-40, 15, 15);
-    ellipse (x-35+55, y-40, 15, 15);
+    ellipse (x-32+55, y-40, 15, 15);
     fill (#000000);
     rect (x-25+55, y-40, 17, 1);
   }
 
   if (q==3) {
-    fill (#FF0000);
+    fill (#FF8D00);
     noStroke();
-    rect (x+25, y+10-100, 20, 40);
-    rect (x-10+25, y+50-100, 40, 5);
-    fill (#FFFFFF);
-    rect (x+25, y+20-100, 20, 5);
-    rect (x+25, y+30-100, 20, 5);
-    rect (x+25, y+40-100, 20, 5);
+    rect (x+25, y-70, 25, 25);
+    rect (x-5+25, y+20-70, 35, 5);
   }
 
   if (q==4) {
-    fill (#FF0000);
+    fill (#FF8D00);
     noStroke();
-    rect (x+25, y+10-100, 20, 40);
-    rect (x-10+25, y+50-100, 40, 5);
-    fill (#FFFFFF);
-    rect (x+25, y+20-100, 20, 5);
-    rect (x+25, y+30-100, 20, 5);
-    rect (x+25, y+40-100, 20, 5);
-
-
+    rect (x+25, y-75, 25, 25);
+    rect (x-5+25, y+20-75, 35, 5);
 
     stroke(0);
     strokeWeight(1);
     fill (#000000);
     ellipse (x+55, y-40, 20, 20);
-    ellipse (x-35+55, y-40, 20, 20);
+    ellipse (x-32+55, y-40, 20, 20);
     fill (#FFFFFF);
     ellipse (x+55, y-40, 15, 15);
-    ellipse (x-35+55, y-40, 15, 15);
+    ellipse (x-32+55, y-40, 15, 15);
     fill (#000000);
     rect (x-25+55, y-40, 17, 1);
   }

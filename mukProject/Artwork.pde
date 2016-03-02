@@ -72,22 +72,18 @@ void glasses() {
   strokeWeight(1);
   fill (#000000);
   ellipse (gX, gY, 20, 20);
-  ellipse (gX-35, gY, 20, 20);
+  ellipse (gX-32, gY, 20, 20);
   fill (#FFFFFF);
   ellipse (gX, gY, 15, 15);
-  ellipse (gX-35, gY, 15, 15);
+  ellipse (gX-32, gY, 15, 15);
   fill (#000000);
   rect (gX-25, gY, 17, 1);
 }
 
 void hat() {
 
-  fill (#FF0000);
+  fill (#FF8D00);
   noStroke();
-  rect (hX, hY+10, 20, 40);
-  rect (hX-10, hY+50, 40, 5);
-  fill (#FFFFFF);
-  rect (hX, hY+20, 20, 5);
-  rect (hX, hY+30, 20, 5);
-  rect (hX, hY+40, 20, 5);
+  rect (hX, hY, 25, 25);
+  rect (hX-5, hY+20, 35, 5);
 }
