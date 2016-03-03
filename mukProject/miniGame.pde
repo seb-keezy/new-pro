@@ -73,13 +73,13 @@ void miniGame() {
     coinV=8;
     c3VX=12;
   }
-  
-  if(count>750){
+
+  if (count>750) {
     coinV=12;
     pageNum=2;
   }
 
- if (dist(mouseX-25, mouseY+20, c1X, c1Y)<70) {
+  if (dist(mouseX-25, mouseY+20, c1X, c1Y)<70) {
     pageNum=2;
     c1X=700;
     c1Y=200;
@@ -120,8 +120,8 @@ void miniGame() {
     count=0;
     allCoin2=0;
   }
-  
-   if (dist(mouseX-25, mouseY+20, c3X, c3Y)<70 && count>500) {
+
+  if (dist(mouseX-25, mouseY+20, c3X, c3Y)<70 && count>500) {
     pageNum=2;
     c1X=700;
     c1Y=200;

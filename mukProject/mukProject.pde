@@ -39,16 +39,16 @@ void setup() {
   noStroke();
 }
 
-void title(){
+void title() {
   backG=255;
   fill(#aa00ee);
   textSize(40);
-  text("Muk Adventures",75,150);
+  text("Muk Adventures", 75, 150);
   fill(0);
-  text("Muk Adventures",76,151);
+  text("Muk Adventures", 76, 151);
   fill(#8800dd);
-  text("Muk Adventures",77,152);
-  
+  text("Muk Adventures", 77, 152);
+
   fill(#00ffff);
   ellipse(400, 250, 100, 100);
   fill(0);
@@ -56,10 +56,6 @@ void title(){
   text("Start", 381, 251);
   fill(255);
   text("Start", 380, 250);
-  
-  
-  
-  
 }
 
 void draw() {
@@ -78,24 +74,23 @@ void draw() {
     mukY+=5;
   }
 
- 
+
   //game modes based on page number
-  if(pageNum==0){
+  if (pageNum==0) {
     title();
   }
   if (pageNum==1) {
     mainGame();
   }
-  if (pageNum==2){
+  if (pageNum==2) {
     market();
   }
-  if(pageNum==3){
+  if (pageNum==3) {
     miniGame();
   }
-  if(pageNum==4){
+  if (pageNum==4) {
     shop();
   }
-  
 }
 
 
@@ -163,18 +158,18 @@ void keyPressed() {
     goU=1;
   }
   bordersAndCamera();
-  
-  
-  if (key == '1'){
+
+
+  if (key == '1') {
     pageNum=1;
   }
-  if (key == '2'){
+  if (key == '2') {
     pageNum=2;
   }
-  if (key == '3'){
+  if (key == '3') {
     pageNum=3;
   }
-  if (key == '4'){
+  if (key == '4') {
     pageNum=4;
   }
 }
@@ -192,54 +187,53 @@ void keyReleased() {
   if (keyCode==UP) {
     goU=0;
   }
-  
 }
 
 
-void mousePressed(){
-  if(mouseX>350 && mouseX<420 && mouseY>50 && mouseY<160 && pageNum==2){
+void mousePressed() {
+  if (mouseX>350 && mouseX<420 && mouseY>50 && mouseY<160 && pageNum==2) {
     pageNum=3;
   }
-  if(mouseX>0 && mouseX<250 && mouseY>125 && mouseY<275 && pageNum==2){
+  if (mouseX>0 && mouseX<250 && mouseY>125 && mouseY<275 && pageNum==2) {
     pageNum=4;
   }
-  
-  if(mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 && coinV>=4
-  && bling==1){
+
+  if (mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 && coinV>=4
+    && bling==1) {
     bling=3;
     coinV=coinV-4;
   }
-  if(mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 
-  && coinV>=4 && bling==2){
+  if (mouseX>190 && mouseX<230 && mouseY>130 && mouseY<175 && pageNum==4 
+    && coinV>=4 && bling==2) {
     bling=4;
     coinV=coinV-4;
   }
-  
-  if(mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
-  && coinV>=4 && bling==1){
+
+  if (mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
+    && coinV>=4 && bling==1) {
     bling=2;
     coinV=coinV-4;
   }
-  if(mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
-  && coinV>=4 && bling==3){
+  if (mouseX>150-35 && mouseX<150+10 && mouseY>140 && mouseY<160 && pageNum==4 
+    && coinV>=4 && bling==3) {
     bling=4;
     coinV=coinV-4;
   }
-  
-  if(dist(mouseX,mouseY,400,250)<50 && pageNum==4){
+
+  if (dist(mouseX, mouseY, 400, 250)<50 && pageNum==4) {
     pageNum=2;
   }
-  if(dist(mouseX,mouseY,400,250)<50 && pageNum==0){
+  if (dist(mouseX, mouseY, 400, 250)<50 && pageNum==0) {
     pageNum=1;
   }
-  
-  if(mouseX>50 && mouseX<80 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
+
+  if (mouseX>50 && mouseX<80 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4) {
     coinV=coinV-4;
     muk1=(#ffff00);
-    muk2=(#F5D416); 
+    muk2=(#F5D416);
   }
-  
-  if(mouseX>100 && mouseX<130 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
+
+  if (mouseX>100 && mouseX<130 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4) {
     coinV=coinV-4;
     muk1=(#27F0A4);
     muk2=(#00ff00);

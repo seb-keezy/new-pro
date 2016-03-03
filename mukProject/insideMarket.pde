@@ -8,7 +8,7 @@ void market() {
   fill(#F0BC6F);
   rect(0, 225, 250, 50);
   fill(#ffff00);
-  text(coinV,20,20);
+  text(coinV, 20, 20);
 
   //glasses
   fill (#000000);
@@ -54,5 +54,5 @@ void market() {
   rect (hX, hY+30, 20, 5);
   rect (hX, hY+40, 20, 5);
 
-//pastebin.com/yBckjDSX
+  //pastebin.com/yBckjDSX
 }

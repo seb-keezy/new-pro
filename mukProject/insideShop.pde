@@ -19,14 +19,12 @@ void shop() {
   text("Back", 381, 251);
   fill(255);
   text("Back", 380, 250);
-  
+
   stroke(0);
   //yellow button
   fill(#ffff00);
-  rect(50,200,30,30);
+  rect(50, 200, 30, 30);
   //green button
   fill(#00ff00);
-  rect(100,200,30,30);
-  
-  
+  rect(100, 200, 30, 30);
 }
