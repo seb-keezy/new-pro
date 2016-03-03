@@ -73,6 +73,11 @@ void miniGame() {
     coinV=8;
     c3VX=12;
   }
+  
+  if(count>750){
+    coinV=12;
+    pageNum=2;
+  }
 
  if (dist(mouseX-25, mouseY+20, c1X, c1Y)<70) {
     pageNum=2;

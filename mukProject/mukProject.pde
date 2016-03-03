@@ -31,12 +31,35 @@ int b3X=1400;
 int b3Y=700;
 int b3VX=8;
 
-color backG=(#FCBC08);
+color backG=(255);
 
 void setup() {
   frameRate(30);
   size(480, 320);
   noStroke();
+}
+
+void title(){
+  backG=255;
+  fill(#aa00ee);
+  textSize(40);
+  text("Muk Adventures",75,150);
+  fill(0);
+  text("Muk Adventures",76,151);
+  fill(#8800dd);
+  text("Muk Adventures",77,152);
+  
+  fill(#00ffff);
+  ellipse(400, 250, 100, 100);
+  fill(0);
+  textSize(20);
+  text("Start", 381, 251);
+  fill(255);
+  text("Start", 380, 250);
+  
+  
+  
+  
 }
 
 void draw() {
@@ -57,7 +80,10 @@ void draw() {
 
  
   //game modes based on page number
-  if (pageNum==0) {
+  if(pageNum==0){
+    title();
+  }
+  if (pageNum==1) {
     mainGame();
   }
   if (pageNum==2){
@@ -139,7 +165,9 @@ void keyPressed() {
   bordersAndCamera();
   
   
-  
+  if (key == '1'){
+    pageNum=1;
+  }
   if (key == '2'){
     pageNum=2;
   }
@@ -201,23 +229,19 @@ void mousePressed(){
   if(dist(mouseX,mouseY,400,250)<50 && pageNum==4){
     pageNum=2;
   }
+  if(dist(mouseX,mouseY,400,250)<50 && pageNum==0){
+    pageNum=1;
+  }
   
   if(mouseX>50 && mouseX<80 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
     coinV=coinV-4;
     muk1=(#ffff00);
-    muk2=(#F5D416);
-    
+    muk2=(#F5D416); 
   }
   
   if(mouseX>100 && mouseX<130 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4){
     coinV=coinV-4;
     muk1=(#27F0A4);
     muk2=(#00ff00);
-    
-    
   }
-  
-  
-  
-  
 }

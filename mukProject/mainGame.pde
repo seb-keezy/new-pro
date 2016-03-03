@@ -1,5 +1,5 @@
 void mainGame() {
-
+  backG=#FCBC08;
   //call functions
   bordersAndCamera();
   //main character
@@ -272,34 +272,34 @@ void mainGame() {
   textSize(20);
   fill(#ED19FC);
   //collision with mart
-  if(mukX-20-camX+90>1300-camX && mukX-20-camX+90<1320-camX && mukY-50-camY<900-camY
-  && mukY-50-camY+70>700-camY && allCoin==0){
+  if (mukX-20-camX+90>1300-camX && mukX-20-camX+90<1320-camX && mukY-50-camY<900-camY
+    && mukY-50-camY+70>700-camY && allCoin==0) {
     mukX=1230;
-    text("Need more coins to enter",20,300);
+    text("Need more coins to enter", 20, 300);
   }
-  if(mukY-50-camY+70>700-camY && mukY-50-camY+70<720-camY && mukX-20-camX<1500-camX
-  && mukX-20-camX+90>1300-camX && allCoin==0){
+  if (mukY-50-camY+70>700-camY && mukY-50-camY+70<720-camY && mukX-20-camX<1500-camX
+    && mukX-20-camX+90>1300-camX && allCoin==0) {
     mukY=680;
-    text("Need more coins to enter",20,300);
+    text("Need more coins to enter", 20, 300);
   }
-  if(mukY-50-camY<900-camY && mukY-50-camY>880-camY && mukX-20-camX<1500-camX
-  && mukX-20-camX+90>1300-camX && allCoin==0){
+  if (mukY-50-camY<900-camY && mukY-50-camY>880-camY && mukX-20-camX<1500-camX
+    && mukX-20-camX+90>1300-camX && allCoin==0) {
     mukY=950;
-    text("Need more coins to enter",20,300);
+    text("Need more coins to enter", 20, 300);
   }
-  
-  if(mukX-20-camX+90>1300-camX && mukX-20-camX+90<1320-camX && mukY-50-camY<900-camY
-  && mukY-50-camY+70>700-camY && allCoin==1){
+
+  if (mukX-20-camX+90>1300-camX && mukX-20-camX+90<1320-camX && mukY-50-camY<900-camY
+    && mukY-50-camY+70>700-camY && allCoin==1) {
     mukX=1230;
     pageNum=2;
   }
-  if(mukY-50-camY+70>700-camY && mukY-50-camY+70<720-camY && mukX-20-camX<1500-camX
-  && mukX-20-camX+90>1300-camX && allCoin==1){
+  if (mukY-50-camY+70>700-camY && mukY-50-camY+70<720-camY && mukX-20-camX<1500-camX
+    && mukX-20-camX+90>1300-camX && allCoin==1) {
     mukY=680;
     pageNum=2;
   }
-  if(mukY-50-camY<900-camY && mukY-50-camY>880-camY && mukX-20-camX<1500-camX
-  && mukX-20-camX+90>1300-camX && allCoin==1){
+  if (mukY-50-camY<900-camY && mukY-50-camY>880-camY && mukX-20-camX<1500-camX
+    && mukX-20-camX+90>1300-camX && allCoin==1) {
     mukY=950;
   }
 
