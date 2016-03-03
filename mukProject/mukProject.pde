@@ -238,4 +238,7 @@ void mousePressed() {
     muk1=(#27F0A4);
     muk2=(#00ff00);
   }
+  if (mouseX>15 && mouseX<60 && mouseY>35 && mouseY<65 && pageNum==2) {
+    pageNum=1;
+  }
 }
