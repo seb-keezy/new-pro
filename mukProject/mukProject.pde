@@ -42,6 +42,8 @@ void setup() {
 void title() {
   backG=255;
   fill(#aa00ee);
+  textSize(20);
+  text("By Blas & Sebastian",20,300);
   textSize(40);
   text("Muk Adventures", 75, 150);
   fill(0);
