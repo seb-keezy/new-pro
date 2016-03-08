@@ -103,7 +103,8 @@ void mainGame() {
   if (mukY-50-camY+70>800-camY && mukY-50-camY+70<820-camY && mukX-20-camX<300-camX) {
     mukY=780;
   }
-  if (mukX-20-camX<300-camX && mukX-20-camX>280-camX && mukY-50-camY+70>800-camY) {
+  if (mukX-20-camX<300-camX && mukX-20-camX>280-camX && mukY-50-camY+70>800-camY
+  && mukY-50<1100-camY) {
     mukX=320;
   }
   //bottom right

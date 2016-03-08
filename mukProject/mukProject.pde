@@ -5,7 +5,7 @@ int camX;
 int camY;
 
 int mapX=1500;
-int mapY=1000;
+int mapY=1500;
 
 int goR;
 int goL;
