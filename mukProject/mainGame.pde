@@ -104,18 +104,26 @@ void mainGame() {
     mukY=780;
   }
   if (mukX-20-camX<300-camX && mukX-20-camX>280-camX && mukY-50-camY+70>800-camY
-  && mukY-50<1100-camY) {
+  && mukY-50-camY<1100-camY) {
     mukX=320;
   }
+  
+  if(mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camX<300-camX) {
+    mukY=1150;
+  }
+    
+  
   //bottom right
   if (mukY-50-camY+70>800-camY && mukY-50-camY+70<820-camY && mukX-20-camX<900-camX
     && mukX-20-camX+90>500-camX) {
     mukY=780;
   }
-  if (mukX-20-camX<900-camX && mukX-20-camX>880-camX && mukY-50-camY+70>800-camY) {
+  if (mukX-20-camX<900-camX && mukX-20-camX>880-camX && mukY-50-camY+70>800-camY
+  && mukY-50-camY<1100-camY) {
     mukX=920;
   }
-  if (mukX-20-camX+90>500-camX && mukX-20-camX+90<520-camX && mukY-50-camX+70>800-camX) {
+  if (mukX-20-camX+90>500-camX && mukX-20-camX+90<520-camX && mukY-50-camX+70>800-camX
+  && mukY-50-camY<1100-camY) {
     mukX=430;
   }
 
