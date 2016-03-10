@@ -5,7 +5,7 @@ int camX;
 int camY;
 
 int mapX=1500;
-int mapY=1500;
+int mapY=1300;
 
 int goR;
 int goL;
@@ -17,19 +17,20 @@ int coin1=1;
 int coin2=1;
 int coin3=1;
 int coin4=1;
+int coin5=1;
 int allCoin;
 
 int b1X=300;
 int b1Y=400;
-int b1VX=8;
+int b1VX=12;
 
 int b2X=1000;
 int b2Y=100;
-int b2VY=8;
+int b2VY=25;
 
 int b3X=1400;
 int b3Y=700;
-int b3VX=8;
+int b3VX=12;
 
 color backG=(255);
 

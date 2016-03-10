@@ -148,6 +148,7 @@ void mainGame() {
     coin2=1;
     coin3=1;
     coin4=1;
+    coin5=1;
     allCoin=0;
 
     b1X=300;
@@ -183,6 +184,7 @@ void mainGame() {
     coin2=1;
     coin3=1;
     coin4=1;
+    coin5=1;
     allCoin=0;
 
     b1X=300;
@@ -218,6 +220,7 @@ void mainGame() {
     coin2=1;
     coin3=1;
     coin4=1;
+    coin5=1;
     allCoin=0;
 
     b1X=300;
@@ -232,6 +235,8 @@ void mainGame() {
     b3Y=700;
     b3VX=8;
   }
+  
+  
   //drawCoins
   if (coin1==1) {
     drawCoin(100-camX, 250-camY);
@@ -273,9 +278,18 @@ void mainGame() {
   if (coin4==0) {
     drawCoin(110, 20);
   }
-
+  
+  if (coin5==1){
+    drawCoin(1400-camX,1200-camY);
+  }
+  if(dist(1400-camX,1200-camY,mukX-camX,mukY-camY)<80){
+    coin5=0;
+  }
+  if (coin5==0){
+    drawCoin(140,20);
+  }
   //collecting all coins
-  if (coin1==0 && coin2==0 && coin3==0 && coin4==0) {
+  if (coin1==0 && coin2==0 && coin3==0 && coin4==0 && coin5==0) {
     allCoin=1;
   }
   textSize(20);

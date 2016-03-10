@@ -15,7 +15,7 @@ int coinY=(int)random(200)+50;
 
 int count;
 int allCoin2;
-int coinV=4;
+int coinV=5;
 
 void miniGame() {
   backG=(#F4F2FF);
