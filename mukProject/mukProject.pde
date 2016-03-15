@@ -32,6 +32,18 @@ int b3X=1400;
 int b3Y=700;
 int b3VX=12;
 
+int b4X=800;
+int b4Y=1200;
+int b4VY;
+
+int b5X=1100;
+int b5Y=1200;
+int b5VY;
+
+int b6X=100;
+int b6Y=1200;
+int b6VX;
+
 color backG=(255);
 
 void setup() {

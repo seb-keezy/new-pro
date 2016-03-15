@@ -10,7 +10,9 @@ void mainGame() {
   drawBall(b1X-camX, b1Y-camY, .75);
   drawBall(b2X-camX, b2Y-camY, .75);
   drawBall(b3X-camX, b3Y-camY, .75);
-
+  drawBall(b4X-camX, b4Y-camY,.75);
+  drawBall(b5X-camX, b5Y-camY,.75);
+  drawBall(b6X-camX, b6Y-camY,.75);
   //rectangular hit box
   //fill(0, 100);
   //rect(mukX-20-camX, mukY-50-camY, 90, 70);
