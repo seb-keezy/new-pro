@@ -27,4 +27,8 @@ void shop() {
   //green button
   fill(#00ff00);
   rect(100, 200, 30, 30);
+  
+  if(bling==4){
+    pageNum=5;
+  }
 }

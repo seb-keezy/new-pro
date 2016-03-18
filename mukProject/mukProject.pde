@@ -32,17 +32,17 @@ int b3X=1400;
 int b3Y=700;
 int b3VX=12;
 
-int b4X=800;
-int b4Y=1200;
-int b4VY;
+float b4X=800;
+float b4Y=1200;
+float b4T;
 
-int b5X=1100;
-int b5Y=1200;
-int b5VY;
+float b5X=1100;
+float b5Y=1200;
+float b5T=2;
 
 int b6X=100;
 int b6Y=1200;
-int b6VX;
+int b6VX=8;
 
 color backG=(255);
 
@@ -77,16 +77,16 @@ void draw() {
   background(backG);
   //muk movement
   if (goR==1) {
-    mukX+=5;
+    mukX+=6;
   }
   if (goL==1) {
-    mukX-=5;
+    mukX-=6;
   }
   if (goU==1) {
-    mukY-=5;
+    mukY-=6;
   }
   if (goD==1) {
-    mukY+=5;
+    mukY+=6;
   }
 
 
@@ -105,6 +105,9 @@ void draw() {
   }
   if (pageNum==4) {
     shop();
+  }
+  if(pageNum==5){
+    endGame();
   }
 }
 
@@ -187,6 +190,9 @@ void keyPressed() {
   if (key == '4') {
     pageNum=4;
   }
+  if(key== '5'){
+    pageNum=5;
+  }
 }
 
 void keyReleased() {
@@ -256,4 +262,27 @@ void mousePressed() {
   if (mouseX>15 && mouseX<60 && mouseY>35 && mouseY<65 && pageNum==2) {
     pageNum=1;
   }
+  if (dist(mouseX, mouseY, 400, 250)<50 && pageNum==5) {
+    pageNum=4;
+  }
+}
+
+void endGame(){
+  background(255);
+  fill(#aa00ee);
+  textSize(40);
+  text("Congrats! Muk is", 30,150);
+  text("Swagged Out",60,200);
+  
+  fill(#00ffff);
+  ellipse(400, 250, 100, 100);
+  fill(0);
+  textSize(20);
+  text("Resume", 371, 256);
+  fill(255);
+  text("Resume", 370, 255);
+  
+  
+  
+  
 }

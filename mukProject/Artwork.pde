@@ -50,7 +50,7 @@ void pokemart(int x, int y, int s) {
 }
 
 
-void drawBall(int x, int y, float s) {
+void drawBall(float x, float y, float s) {
   fill(#dddddd);
   noStroke();
   arc(x, y, 80*s, 80*s, 0, PI, OPEN);

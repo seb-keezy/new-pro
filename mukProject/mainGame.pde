@@ -128,6 +128,11 @@ void mainGame() {
   && mukY-50-camY<1100-camY) {
     mukX=430;
   }
+  
+  if(mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camY+90>600-camX &&
+  mukX-20-camY<1500-camX){
+    mukY=1150;
+  }
 
   //pokeball collisions
   if (dist(mukX+25, mukY-10, b1X, b1Y)<70) {
@@ -238,6 +243,112 @@ void mainGame() {
     b3VX=8;
   }
   
+  if (dist(mukX+25, mukY-10, b5X, b5Y)<70) {
+    mukX=50;
+    mukY=50;
+
+    camX=0;
+    camY=0;
+
+    mapX=1500;
+    mapY=1000;
+
+    goR=0;
+    goL=0;
+    goU=0;
+    goD=0;
+
+    pageNum=0;
+    coin1=1;
+    coin2=1;
+    coin3=1;
+    coin4=1;
+    coin5=1;
+    allCoin=0;
+
+    b1X=300;
+    b1Y=400;
+    b1VX=8;
+
+    b2X=1000;
+    b2Y=100;
+    b2VY=8;
+
+    b3X=1400;
+    b3Y=700;
+    b3VX=8;
+  }
+  if (dist(mukX+25, mukY-10, b4X, b4Y)<70) {
+    mukX=50;
+    mukY=50;
+
+    camX=0;
+    camY=0;
+
+    mapX=1500;
+    mapY=1000;
+
+    goR=0;
+    goL=0;
+    goU=0;
+    goD=0;
+
+    pageNum=0;
+    coin1=1;
+    coin2=1;
+    coin3=1;
+    coin4=1;
+    coin5=1;
+    allCoin=0;
+
+    b1X=300;
+    b1Y=400;
+    b1VX=8;
+
+    b2X=1000;
+    b2Y=100;
+    b2VY=8;
+
+    b3X=1400;
+    b3Y=700;
+    b3VX=8;
+  }
+  
+  if (dist(mukX+25, mukY-10, b6X, b6Y)<70) {
+    mukX=50;
+    mukY=50;
+
+    camX=0;
+    camY=0;
+
+    mapX=1500;
+    mapY=1000;
+
+    goR=0;
+    goL=0;
+    goU=0;
+    goD=0;
+
+    pageNum=0;
+    coin1=1;
+    coin2=1;
+    coin3=1;
+    coin4=1;
+    coin5=1;
+    allCoin=0;
+
+    b1X=300;
+    b1Y=400;
+    b1VX=8;
+
+    b2X=1000;
+    b2Y=100;
+    b2VY=8;
+
+    b3X=1400;
+    b3Y=700;
+    b3VX=8;
+  }
   
   //drawCoins
   if (coin1==1) {
@@ -358,4 +469,23 @@ void mainGame() {
     b3VX=-b1VX;
     b3X=300-camX;
   }
+  
+  b4T+=.1;
+  b4X=800+100*cos(b4T);
+  b4Y=1200+50*sin(b4T);
+  
+  b5T+=.1;
+  b5X=1100+100*cos(b5T);
+  b5Y=1200+50*sin(b5T);
+  
+  b6X+=b6VX;
+  if(b6X>700-camX){
+    b6VX=-b6VX;
+    b6X=700-camX;
+  }
+  if(b6X<50-camX){
+    b6VX=-b6VX;
+    b6X=50-camX;
+  }
+  
 }
