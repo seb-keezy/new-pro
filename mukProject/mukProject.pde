@@ -12,7 +12,7 @@ int goL;
 int goU;
 int goD;
 
-int pageNum;
+float pageNum;
 int coin1=1;
 int coin2=1;
 int coin3=1;
@@ -21,7 +21,7 @@ int coin5=1;
 int allCoin;
 
 int b1X=300;
-int b1Y=400;
+float b1Y=400;
 int b1VX=12;
 
 int b2X=1000;
@@ -29,7 +29,7 @@ int b2Y=100;
 int b2VY=25;
 
 int b3X=1400;
-int b3Y=700;
+float b3Y=700;
 int b3VX=12;
 
 float b4X=800;
@@ -56,7 +56,7 @@ void title() {
   backG=255;
   fill(#aa00ee);
   textSize(20);
-  text("By Blas & Sebastian",20,300);
+  text("By Blas & Sebastian", 20, 300);
   textSize(40);
   text("Muk Adventures", 75, 150);
   fill(0);
@@ -68,9 +68,9 @@ void title() {
   ellipse(400, 250, 100, 100);
   fill(0);
   textSize(20);
-  text("Start", 381, 251);
+  text("Next", 381, 251);
   fill(255);
-  text("Start", 380, 250);
+  text("Next", 380, 250);
 }
 
 void draw() {
@@ -94,9 +94,13 @@ void draw() {
   if (pageNum==0) {
     title();
   }
+  if (pageNum==.5) {
+    story();
+  }
   if (pageNum==1) {
     mainGame();
   }
+
   if (pageNum==2) {
     market();
   }
@@ -106,7 +110,7 @@ void draw() {
   if (pageNum==4) {
     shop();
   }
-  if(pageNum==5){
+  if (pageNum==5) {
     endGame();
   }
 }
@@ -190,7 +194,7 @@ void keyPressed() {
   if (key == '4') {
     pageNum=4;
   }
-  if(key== '5'){
+  if (key== '5') {
     pageNum=5;
   }
 }
@@ -245,8 +249,12 @@ void mousePressed() {
     pageNum=2;
   }
   if (dist(mouseX, mouseY, 400, 250)<50 && pageNum==0) {
+    pageNum=.5;
+  }
+  if (dist(mouseX, mouseY, 100, 250)<50 && pageNum==.5) {
     pageNum=1;
   }
+
 
   if (mouseX>50 && mouseX<80 && mouseY>200 && mouseY<230 && pageNum==4 && coinV>=4) {
     coinV=coinV-4;
@@ -267,13 +275,13 @@ void mousePressed() {
   }
 }
 
-void endGame(){
+void endGame() {
   background(255);
   fill(#aa00ee);
   textSize(40);
-  text("Congrats! Muk is", 30,150);
-  text("Swagged Out",60,200);
-  
+  text("Congrats! Muk is", 30, 150);
+  text("Swagged Out", 60, 200);
+
   fill(#00ffff);
   ellipse(400, 250, 100, 100);
   fill(0);
@@ -281,8 +289,24 @@ void endGame(){
   text("Resume", 371, 256);
   fill(255);
   text("Resume", 370, 255);
-  
-  
-  
-  
+}
+
+void story() {
+  textSize(20);
+  fill(#aa00ee);
+  text("Help Muk get to the", 50, 100);
+  text("Pokemart so he can get", 50, 140);
+  text("a fedora and a cane!", 50, 180);
+  fill(#8800dd);
+  text("Help Muk get to the", 51, 101);
+  text("Pokemart so he can get", 51, 141);
+  text("a fedora and a cane!", 51, 181);
+
+  fill(#00ffff);
+  ellipse(100, 250, 100, 100);
+  fill(0);
+  textSize(20);
+  text("Start", 81, 251);
+  fill(255);
+  text("Start", 80, 250);
 }

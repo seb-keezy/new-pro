@@ -10,9 +10,9 @@ void mainGame() {
   drawBall(b1X-camX, b1Y-camY, .75);
   drawBall(b2X-camX, b2Y-camY, .75);
   drawBall(b3X-camX, b3Y-camY, .75);
-  drawBall(b4X-camX, b4Y-camY,.75);
-  drawBall(b5X-camX, b5Y-camY,.75);
-  drawBall(b6X-camX, b6Y-camY,.75);
+  drawBall(b4X-camX, b4Y-camY, .75);
+  drawBall(b5X-camX, b5Y-camY, .75);
+  drawBall(b6X-camX, b6Y-camY, .75);
   //rectangular hit box
   //fill(0, 100);
   //rect(mukX-20-camX, mukY-50-camY, 90, 70);
@@ -20,6 +20,12 @@ void mainGame() {
   //ellipse(mukX+25, mukY-20, 80, 80);
 
   //barrier collisions
+  if (mukX-20-camX<0-camX) {
+    mukX=20;
+  }
+  if (mukY-50-camY+70>1300) {
+    mukY=1280;
+  }
   //top main
   if (mukX-20-camX+90>200-camX && mukX-20-camX+90<220-camX && mukY-50-camY<300-camY) {
     mukX=200-70;
@@ -106,31 +112,31 @@ void mainGame() {
     mukY=780;
   }
   if (mukX-20-camX<300-camX && mukX-20-camX>280-camX && mukY-50-camY+70>800-camY
-  && mukY-50-camY<1100-camY) {
+    && mukY-50-camY<1100-camY) {
     mukX=320;
   }
-  
-  if(mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camX<300-camX) {
+
+  if (mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camX<300-camX) {
     mukY=1150;
   }
-    
-  
+
+
   //bottom right
   if (mukY-50-camY+70>800-camY && mukY-50-camY+70<820-camY && mukX-20-camX<900-camX
     && mukX-20-camX+90>500-camX) {
     mukY=780;
   }
   if (mukX-20-camX<900-camX && mukX-20-camX>880-camX && mukY-50-camY+70>800-camY
-  && mukY-50-camY<1100-camY) {
+    && mukY-50-camY<1100-camY) {
     mukX=920;
   }
   if (mukX-20-camX+90>500-camX && mukX-20-camX+90<520-camX && mukY-50-camX+70>800-camX
-  && mukY-50-camY<1100-camY) {
+    && mukY-50-camY<1100-camY) {
     mukX=430;
   }
-  
-  if(mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camY+90>600-camX &&
-  mukX-20-camY<1500-camX){
+
+  if (mukY-50-camY<1100-camY && mukY-50-camY>1080-camY && mukX-20-camY+90>500-camX &&
+    mukX-20-camY<1500-camX) {
     mukY=1150;
   }
 
@@ -242,7 +248,7 @@ void mainGame() {
     b3Y=700;
     b3VX=8;
   }
-  
+
   if (dist(mukX+25, mukY-10, b5X, b5Y)<70) {
     mukX=50;
     mukY=50;
@@ -313,7 +319,7 @@ void mainGame() {
     b3Y=700;
     b3VX=8;
   }
-  
+
   if (dist(mukX+25, mukY-10, b6X, b6Y)<70) {
     mukX=50;
     mukY=50;
@@ -349,7 +355,7 @@ void mainGame() {
     b3Y=700;
     b3VX=8;
   }
-  
+
   //drawCoins
   if (coin1==1) {
     drawCoin(100-camX, 250-camY);
@@ -391,15 +397,15 @@ void mainGame() {
   if (coin4==0) {
     drawCoin(110, 20);
   }
-  
-  if (coin5==1){
-    drawCoin(1400-camX,1200-camY);
+
+  if (coin5==1) {
+    drawCoin(1400-camX, 1200-camY);
   }
-  if(dist(1400-camX,1200-camY,mukX-camX,mukY-camY)<80){
+  if (dist(1400-camX, 1200-camY, mukX-camX, mukY-camY)<80) {
     coin5=0;
   }
-  if (coin5==0){
-    drawCoin(140,20);
+  if (coin5==0) {
+    drawCoin(140, 20);
   }
   //collecting all coins
   if (coin1==0 && coin2==0 && coin3==0 && coin4==0 && coin5==0) {
@@ -469,23 +475,22 @@ void mainGame() {
     b3VX=-b1VX;
     b3X=300-camX;
   }
-  
+
   b4T+=.1;
   b4X=800+100*cos(b4T);
   b4Y=1200+50*sin(b4T);
-  
+
   b5T+=.1;
   b5X=1100+100*cos(b5T);
   b5Y=1200+50*sin(b5T);
-  
+
   b6X+=b6VX;
-  if(b6X>700-camX){
+  if (b6X>700-camX) {
     b6VX=-b6VX;
     b6X=700-camX;
   }
-  if(b6X<50-camX){
+  if (b6X<50-camX) {
     b6VX=-b6VX;
     b6X=50-camX;
   }
-  
 }
