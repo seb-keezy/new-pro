@@ -21,16 +21,18 @@ int coin5=1;
 int allCoin;
 
 int b1X=300;
-float b1Y=400;
+float b1Y;
 int b1VX=12;
+int b1T;
 
 int b2X=1000;
 int b2Y=100;
 int b2VY=25;
 
 int b3X=1400;
-float b3Y=700;
+float b3Y;
 int b3VX=12;
+int b3T;
 
 float b4X=800;
 float b4Y=1200;
@@ -301,7 +303,8 @@ void story() {
   text("Help Muk get to the", 51, 101);
   text("Pokemart so he can get", 51, 141);
   text("a fedora and a cane!", 51, 181);
-
+  strokeWeight(1);
+  stroke(0);
   fill(#00ffff);
   ellipse(100, 250, 100, 100);
   fill(0);
@@ -309,4 +312,5 @@ void story() {
   text("Start", 81, 251);
   fill(255);
   text("Start", 80, 250);
+  muk(300,250,#aa00ee,#8800dd,.5,1);
 }

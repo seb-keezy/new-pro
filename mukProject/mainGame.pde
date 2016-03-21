@@ -455,6 +455,8 @@ void mainGame() {
     b1VX=-b1VX;
     b1X=300-camX;
   }
+  b1T+=1;
+  b1Y=400+20*sin(b1T);
 
   b2Y+=b2VY;
   if (b2Y>900-camY) {
@@ -475,6 +477,8 @@ void mainGame() {
     b3VX=-b1VX;
     b3X=300-camX;
   }
+  b3T+=1;
+  b3Y=700+20*sin(b3T);
 
   b4T+=.1;
   b4X=800+100*cos(b4T);

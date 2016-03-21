@@ -1,16 +1,16 @@
 void market() {
   fill(#ff0000);
   beginShape();
-  vertex(15,50);
-  vertex(30,30);
-  vertex(30,35);
-  vertex(60,35);
-  vertex(60,65);
-  vertex(30,65);
-  vertex(30,70);
+  vertex(15, 50);
+  vertex(30, 30);
+  vertex(30, 35);
+  vertex(60, 35);
+  vertex(60, 65);
+  vertex(30, 65);
+  vertex(30, 70);
   endShape();
 
-    cursor();
+  cursor();
   backG=(#2296F2);
   strokeWeight(1);
   stroke(0);
